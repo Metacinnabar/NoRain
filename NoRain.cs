@@ -1,4 +1,7 @@
-using GoodProLib.GUtils;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace NoRain
@@ -17,7 +20,15 @@ namespace NoRain
 
 		private void Main_StartRain(On.Terraria.Main.orig_StartRain orig)
 		{
-			ChatUtils.Chat("Rain skipped", true, default);
+			Chat("Rain skipped");
+		}
+
+		public static void Chat(string message)
+		{
+			if (Main.netMode == NetmodeID.SinglePlayer)
+				Main.NewText(message);
+			else
+				NetMessage.BroadcastChatMessage(NetworkText.FromLiteral(message), Color.White);
 		}
 	}
 }
