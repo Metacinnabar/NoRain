@@ -4,3 +4,5 @@ Forum (homepage): https://forums.terraria.org/index.php?threads/no-rain.85664/
 Github: https://github.com/GoodPro712/NoRain
 Discord: https://discord.gg/VrxSx4B
 Patreon: https://www.patreon.com/goodpro712
+
+German localization by TheStachelfisch
