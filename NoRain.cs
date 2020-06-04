@@ -20,7 +20,7 @@ namespace NoRain
 
 		private void Main_StartRain(On.Terraria.Main.orig_StartRain orig)
 		{
-			Chat();
+			Chat(Language.GetTextValue("Mods.NoRain.Common.RainSkipped"));
 		}
 
 		public static void Chat(string message)
